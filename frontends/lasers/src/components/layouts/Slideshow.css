@@ -96,6 +96,12 @@
   list-style: none;
 }
 
+/* Restore bullets for plain uls (outline, bullet-list, and command-list use custom or no markers). */
+.slide ul:not(.slide-outline):not(.slide-bullet-list):not(.command-list-list) {
+  list-style-type: disc;
+  padding-left: 1.5em; /* room for the marker */
+}
+
 .slide ul:not(.slide-outline):not(.slide-bullet-list):not(.command-list-list) li,
 .slide ol:not(.command-list-list) li {
   padding-left: 1.75rem;

@@ -15,7 +15,7 @@ const HEAD_MAX_Y = 160;
 const HEAD_MIN_X = 15;
 const HEAD_MAX_X = 300;
 /** When XTool (galvo): head is fixed near top of canvas */
-const XTOOL_HEAD_Y = 28;
+const XTOOL_HEAD_Y = 100;
 /** Beam half-angle scale: tan(halfAngle) ≈ BEAM_RADIUS_AT_LENS / focalLength (larger = wider beam at head) */
 const BEAM_RADIUS_AT_LENS = 10;
 
