@@ -6,7 +6,6 @@ const BASE = import.meta.env.BASE_URL;
 const MEDIA_ITEMS = [
   { type: 'video' as const, src: `${BASE}trotec-fire.mp4`, ariaLabel: 'Safety video' },
   { type: 'image' as const, src: `${BASE}trotec-damage-1.jpeg`, alt: 'Laser cutter damage example 1' },
-  { type: 'image' as const, src: `${BASE}trotec-damage-2.jpeg`, alt: 'Laser cutter damage example 2' },
 ] as const;
 
 function Slide12(): JSX.Element {
@@ -63,6 +62,6 @@ function Slide12(): JSX.Element {
 }
 
 export default defineSlide(Slide12, {
-  id: 'safety',
+  id: 'safety-video',
   title: 'Safety',
 });

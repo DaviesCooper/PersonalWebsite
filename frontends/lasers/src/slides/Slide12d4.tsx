@@ -2,19 +2,15 @@ import { ColumnSlide } from '../components/layouts/ColumnSlide';
 import { defineSlide } from './defineSlide';
 import { useLaserTool } from '../context/LaserToolContext';
 
-function Slide12d3(): JSX.Element {
+function Slide12d4(): JSX.Element {
   const {tool} = useLaserTool();
   return (
     <ColumnSlide
       left={
         <div>
-          <p>Sublimating chlorine creates chlorine gas.</p>
-          <p>Chlorine gas is:</p>
-          <ul>
-            <li>a toxic gas.</li>
-            <li>a corrosive gas.</li>
-            <li>a flammable gas.</li>
-          </ul>
+          <p>The XTool has a lid interlock that prevents the lid from being opened while the machine is running.</p>
+          <p>If the lid interlock is disabled, the machine will run without the lid interlock.</p>
+          <p>This turns the machine from a class 1 laser to a class 4 laser.</p>
         </div>
       }
       right={
@@ -32,7 +28,8 @@ function Slide12d3(): JSX.Element {
   );
 }
 
-export default defineSlide(Slide12d3, {
+export default defineSlide(Slide12d4, {
   id: 'safety-chlorine',
   title: 'Safety',
+  whenTool: 'xtool',
 });

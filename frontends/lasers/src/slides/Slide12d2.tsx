@@ -1,33 +1,44 @@
 import { ColumnSlide } from '../components/layouts/ColumnSlide';
 import { defineSlide } from './defineSlide';
-import { useLaserTool } from '../context/LaserToolContext';
+import './Slide12d2.css';
 
-function Slide12(): JSX.Element {
-  const {tool} = useLaserTool();
+const BASE = import.meta.env.BASE_URL;
+
+function Slide12d2(): JSX.Element {
   return (
     <ColumnSlide
       left={
-        <div>
-          <p>There is no risk of fire.</p>
-          <p>There is a guarantee of fire.</p>
-        </div>
+        <>
+          <p>Fire extinguishers are located in the following areas:</p>
+          <ul>
+            <li>Non-CO2 extinguisher near the washrooms.</li>
+            <li>CO2 extinguisher by the lasers.</li>
+          </ul>
+        </>
       }
       right={
-        <div>
-          <p>
-            <ul>NEVER leave the laser cutter unattended.</ul>
-            <ul>NEVER put chlorine in the machine.</ul>
-            {tool === "xtool" && (
-                <ul>NEVER disable the lid interlock.</ul>
-            )}
-          </p>
+        <div className="slide-12d2-images">
+          <div className="slide-12d2-img slide-12d2-img-front">
+            <img
+              src={`${BASE}fire-extinguisher-washrooms.jpg`}
+              alt="Fire extinguisher near washrooms"
+              draggable={false}
+            />
+          </div>
+          <div className="slide-12d2-img slide-12d2-img-back">
+            <img
+              src={`${BASE}fire-extinguisher-trotec.jpg`}
+              alt="Fire extinguisher at Trotec laser"
+              draggable={false}
+            />
+          </div>
         </div>
       }
     />
   );
 }
 
-export default defineSlide(Slide12, {
-  id: 'safety',
+export default defineSlide(Slide12d2, {
+  id: 'safety-fire-extinguishers',
   title: 'Safety',
 });

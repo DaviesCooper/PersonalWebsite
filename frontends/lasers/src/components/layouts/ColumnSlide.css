@@ -75,6 +75,26 @@
   gap: 1rem;
 }
 
+/* Canvas-sized media: same dimensions as simulation canvas (512×512) */
+.column-slide-media-viewer-canvas-size {
+  width: 512px;
+  max-width: 100%;
+  height: 512px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.column-slide-media-viewer-canvas-size img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  vertical-align: top;
+}
+
 /* Video wrap: size to the video's intrinsic dimensions. */
 .column-slide-video-wrap {
   display: block;
@@ -174,6 +194,11 @@
   }
 
   .column-slide-right .column-slide-media-viewer {
+    height: 320px;
+  }
+
+  .column-slide-media-viewer-canvas-size {
+    width: min(512px, 100%);
     height: 320px;
   }
 
