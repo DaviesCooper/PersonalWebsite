@@ -1,6 +1,8 @@
 import type { WindowState } from '../../lib/types/window';
 import styles from './Taskbar.module.css';
 import { useMobileView } from '../../context/MobileViewContext';
+import { FaMobileScreen } from "react-icons/fa6";
+import { SlEnvolopeLetter } from "react-icons/sl";
 
 interface TaskbarProps {
   windows: WindowState[];
@@ -35,13 +37,20 @@ export function Taskbar({ windows, activeId, onFocus, onOpenTerminal }: TaskbarP
           </button>
         ))}
       </div>
+      <a
+        href="mailto:cooper@wildroseplains.ca"
+        className={styles.emailBtn}
+        title="Email me at cooper@wildroseplains.ca"
+      >
+        <SlEnvolopeLetter />
+      </a>
       <button
         type="button"
         className={styles.mobileModeBtn}
         onClick={() => setIsMobileView(true)}
         title="Switch to mobile portfolio view"
       >
-        {'<<Mobile Mode>>'}
+        <FaMobileScreen />
       </button>
     </footer>
   );

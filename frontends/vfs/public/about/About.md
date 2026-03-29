@@ -9,7 +9,11 @@ I'm in Calgary, Alberta. I did my Masters and PhD under Dr. Joerg Denzinger here
 
 The place that shaped me most was [**VizworX**](https://vizworx.com/) a custom solutions shop. Because every project was different, I got to touch a bit of everything: AR/VR, embedded systems, web apps, and a lot of "we need this in six weeks" kind of work. I'm grateful for that; it made me pretty comfortable picking up new stacks and domains.
 
-These days I'm a **Senior AI Engineer** (currently at Remote Inc.), still doing full-stack and AI/ML/LLMs, RAG, the usual suspect. And I'm happy in any senior role where I get to build and ship, not just fix bugs.
+Most recently, I was working as a Senior AI Engineer at Remote Inc., focusing on full-stack development, AI/ML systems, LLMs, and RAG-based solutions.
+
+I was recently laid off and am now actively looking for new opportunities. I’m particularly interested in senior roles where I can build and ship impactful products, work across the stack, and contribute meaningfully to both technical direction and execution—not just maintain existing systems.
+
+If you're working on something interesting and need someone who can move quickly from idea to production, I’d love to connect.
 
 --- 
 

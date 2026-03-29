@@ -89,7 +89,7 @@
 .mobileModeBtn {
   flex-shrink: 0;
   margin-left: auto;
-  padding: 0 12px;
+  padding: 6px 12px;
   height: 24px;
   background: transparent;
   border: none;
@@ -97,9 +97,22 @@
   color: var(--fg);
   font-size: 12px;
   cursor: pointer;
+  background: pink;
+  color: black;
 }
 
-.mobileModeBtn:hover {
-  background: var(--accent);
-  color: white;
+
+.emailBtn {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: 5px 12px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--fg);
+  font-size: 12px;
+  cursor: pointer;
+  background: pink;
+  color: black;
 }

@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { MarkdownPage } from './pages/MarkdownPage';
 import styles from './MobileApp.module.css';
 import { useMobileView } from '../../context/MobileViewContext';
+import { SlEnvolopeLetter } from 'react-icons/sl';
 
 const CONTENT_BY_PATH: Record<string, { url: string; title: string }> = {
   '/about': { url: '/about/About.md', title: 'About' },
@@ -37,9 +38,22 @@ export function MobileApp() {
   return (
     <div className={styles.app}>
       <header className={styles.header}>
-        <Link to="/" className={styles.logo}>
-          Cooper Davies
-        </Link>
+        <div className={styles.logoGroup}>
+          <Link to="/" className={styles.logo}>
+            <img
+              src="/logo.svg"
+              alt=""
+              className={styles.logoImage}
+            />
+          </Link>
+          <a
+            href="mailto:cooper@wildroseplains.ca"
+            className={styles.emailBtn} // Add a class to style spacing
+          >
+            <SlEnvolopeLetter />
+          </a>
+        </div>
+
         {!isHome && (
           <Link to="/" className={styles.back} aria-label="Back to home">
             ← Back

@@ -24,15 +24,47 @@
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+.logoGroup {
+  display: flex;
+  align-items: center; /* Aligns the bottom of the text */
+  gap: 12px;             /* Adjust this for the exact spacing you want */
+}
+
+.emailBtn, .logo{
+  flex-shrink: 0;
+  /* Use the same value for height and width */
+  height: 30px; 
+  width: 30px;
+  
+  /* Make it a circle */
+  border-radius: 50%;
+  
+  /* Center the icon inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Styling */
+  border: none;
+  background: #F296B6;
+  color: black;
+  cursor: pointer;
+  padding: 0; /* Remove padding to keep it perfectly round */
+}
+
+.logoImage {
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+}
+
+
+
 .logo {
   font-weight: 600;
   font-size: 1.125rem;
   color: inherit;
   text-decoration: none;
-}
-
-.logo:active {
-  opacity: 0.85;
 }
 
 .back {
