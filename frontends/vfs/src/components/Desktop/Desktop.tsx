@@ -3,9 +3,9 @@ import { WindowChrome } from '../WindowChrome/WindowChrome';
 import { Taskbar } from '../Taskbar/Taskbar';
 import { TerminalWindow } from '../TerminalWindow/TerminalWindow';
 import { EditorWindow } from '../EditorWindow/EditorWindow';
-import type { WindowState, WindowId, IWindowHost } from '../../core/types/window';
-import type { WindowBounds } from '../../core/types/window';
-import { ViewerRegistry } from '../../core/viewers/ViewerRegistry';
+import type { WindowState, WindowId, IWindowHost } from '../../lib/types/window';
+import type { WindowBounds } from '../../lib/types/window';
+import { ViewerRegistry } from '../../lib/viewers/ViewerRegistry';
 import { ImageViewer } from '../viewers/ImageViewer';
 import { MarkdownViewer } from '../viewers/MarkdownViewer';
 import { AudioViewer } from '../viewers/AudioViewer';
@@ -20,8 +20,8 @@ export interface DesktopProps {
   screenWidth: number;
   screenHeight: number;
   dispatch: (action: import('../../state/WindowManagerState').WindowAction) => void;
-  commandRegistry: import('../../core/commands/CommandRegistry').CommandRegistry;
-  fs: import('../../core/fs/VirtualFilesystem').VirtualFilesystem;
+  commandRegistry: import('../../lib/commands/CommandRegistry').CommandRegistry;
+  fs: import('../../lib/fs/VirtualFilesystem').VirtualFilesystem;
   openInViewer: (path: string, mimeType: string, content: ArrayBuffer | string, options?: { sourceUrl?: string }) => void;
   onVfsRootCleared?: () => void;
 }

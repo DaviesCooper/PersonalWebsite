@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Rnd } from 'react-rnd';
-import type { WindowState, WindowBounds } from '../../core/types/window';
+import type { WindowState, WindowBounds } from '../../lib/types/window';
 import styles from './WindowChrome.module.css';
 
 interface WindowChromeProps {

@@ -1,4 +1,4 @@
-import type { ViewerProps } from '../../core/types/viewer';
+import type { ViewerProps } from '../../lib/types/viewer';
 import styles from './Viewers.module.css';
 
 export function AudioViewer({ payload }: ViewerProps) {

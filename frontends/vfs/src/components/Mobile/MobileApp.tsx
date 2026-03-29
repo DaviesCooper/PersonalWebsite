@@ -1,8 +1,9 @@
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { setViewPreference } from '@shared/viewPreference';
+
 import { Home } from './pages/Home';
 import { MarkdownPage } from './pages/MarkdownPage';
 import styles from './MobileApp.module.css';
+import { useMobileView } from '../../context/MobileViewContext';
 
 const CONTENT_BY_PATH: Record<string, { url: string; title: string }> = {
   '/about': { url: '/about/About.md', title: 'About' },
@@ -32,7 +33,7 @@ function MobileContent() {
 export function MobileApp() {
   const { pathname } = useLocation();
   const isHome = pathname === '/';
-
+  const { setIsMobileView } = useMobileView();
   return (
     <div className={styles.app}>
       <header className={styles.header}>
@@ -56,7 +57,7 @@ export function MobileApp() {
         <button
           type="button"
           className={styles.desktopModeBtn}
-          onClick={() => setViewPreference('desktop')}
+          onClick={() => setIsMobileView(false)}
         >
           Desktop mode
         </button>

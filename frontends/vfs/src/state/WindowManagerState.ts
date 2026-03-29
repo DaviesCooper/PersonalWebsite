@@ -1,4 +1,4 @@
-import type { WindowId, WindowState, WindowBounds } from '../core/types/window';
+import type { WindowId, WindowState, WindowBounds } from '../lib/types/window';
 
 const DEFAULT_WIDTH = 800;
 const DEFAULT_HEIGHT = 500;

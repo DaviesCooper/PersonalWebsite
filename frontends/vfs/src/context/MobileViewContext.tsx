@@ -2,7 +2,7 @@ import { createContext, useContext, type ReactNode } from 'react';
 
 export interface MobileViewContextValue {
   readonly isMobileView: boolean;
-  readonly setIsMobileView: (isMobile: boolean) => void;
+  readonly setIsMobileView: (isMobileView: boolean) => void;
 }
 
 const MobileViewContext = createContext<MobileViewContextValue | null>(null);
@@ -21,7 +21,7 @@ export function MobileViewProvider(props: {
 export function useMobileView(): MobileViewContextValue {
   const ctx = useContext(MobileViewContext);
   if (ctx == null) {
-    throw new Error('useView must be used within ViewProvider');
+    throw new Error('useMobileView must be used within MobileViewProvider');
   }
   return ctx;
 }

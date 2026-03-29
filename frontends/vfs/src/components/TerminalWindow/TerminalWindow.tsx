@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import type { CommandRegistry } from '../../core/commands/CommandRegistry';
-import type { IVirtualFilesystem } from '../../core/types/filesystem';
-import type { IWindowHost } from '../../core/types/window';
-import { ShellSession } from '../../core/shell/ShellSession';
-import { SGR_GREEN, SGR_RED, SGR_YELLOW, SGR_BLUE, SGR_MAGENTA, SGR_CYAN, ANSI_RESET, ANSI_BLUE, ANSI_RED } from '../../core/types/ansi';
+import type { CommandRegistry } from '../../lib/commands/CommandRegistry';
+import type { IVirtualFilesystem } from '../../lib/types/filesystem';
+import type { IWindowHost } from '../../lib/types/window';
+import { ShellSession } from '../../lib/shell/ShellSession';
+import { SGR_GREEN, SGR_RED, SGR_YELLOW, SGR_BLUE, SGR_MAGENTA, SGR_CYAN, ANSI_RESET, ANSI_BLUE, ANSI_RED } from '../../lib/types/ansi';
 import styles from './TerminalWindow.module.css';
 
 const HOME = '/home/cooper';

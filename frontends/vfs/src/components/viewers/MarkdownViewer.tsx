@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import type { PluggableList } from 'unified';
-import type { ViewerProps } from '../../core/types/viewer';
+import type { ViewerProps } from '../../lib/types/viewer';
 import styles from './Viewers.module.css';
 
 /** Sanitize schema that allows iframe (e.g. YouTube embeds), video, and p with align. */

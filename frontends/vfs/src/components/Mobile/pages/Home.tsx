@@ -45,9 +45,14 @@ export function Home() {
         </nav>
       </section>
 
-      <p className={styles.footerNote}>
-        <a href="/lasers">Laser cutter slides</a> (Thunder Training)
-      </p>
+      <section className={styles.section} aria-label="Makerspace">
+        <h2 className={styles.sectionTitle}>Makerspace</h2>
+        <nav className={styles.nav}>
+          <a href="/lasers/" className={styles.card}>
+            <span className={styles.cardTitle}>Laser Cutter</span>
+          </a>
+        </nav>
+      </section>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import type { IVirtualFilesystem } from '../../core/types/filesystem';
-import type { WindowPayload } from '../../core/types/window';
+import type { IVirtualFilesystem } from '../../lib/types/filesystem';
+import type { WindowPayload } from '../../lib/types/window';
 import styles from './EditorWindow.module.css';
 
 /** Keep only ASCII (0x00–0x7F). */
