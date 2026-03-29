@@ -1,6 +1,6 @@
 # Development: live code updates without rebuilding the image.
 # Server: mount ./server, nodemon restarts on .ts changes.
-# VFS: mount ./frontends/vfs, Vite HMR at http://localhost:5173 (desktop + mobile view via ?mobile=1).
+# VFS: mount ./frontends/vfs, Vite HMR at http://localhost:5173 (desktop vs mobile: taskbar / localStorage).
 # Lasers: mount ./frontends/lasers, Vite HMR at http://localhost:5174.
 #
 # Usage: docker compose -f docker-compose.dev.yml up --build -d   (background)

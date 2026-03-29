@@ -1,21 +1,37 @@
-import { Routes, Route, Link, useSearchParams } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { setViewPreference } from '@shared/viewPreference';
 import { Home } from './pages/Home';
 import { MarkdownPage } from './pages/MarkdownPage';
 import styles from './MobileApp.module.css';
 
-const CONTENT_ROUTES = [
-  { path: '/about', url: '/about/About.md', label: 'About' },
-  { path: '/projects/genetic-stippling', url: '/genetic-stippling/genetic-stippling.md', label: 'Genetic Stippling' },
-  { path: '/projects/auto-steamworks', url: '/auto-steamworks/auto-steamworks.md', label: 'Auto Steamworks' },
-  { path: '/projects/hvvoculus', url: '/hvvoculus/hvvoculus.md', label: 'Hvvoculus' },
-] as const;
+const CONTENT_BY_PATH: Record<string, { url: string; title: string }> = {
+  '/about': { url: '/about/About.md', title: 'About' },
+  '/projects/genetic-stippling': {
+    url: '/genetic-stippling/genetic-stippling.md',
+    title: 'Genetic Stippling',
+  },
+  '/projects/auto-steamworks': {
+    url: '/auto-steamworks/auto-steamworks.md',
+    title: 'Auto Steamworks',
+  },
+  '/projects/hvvoculus': { url: '/hvvoculus/hvvoculus.md', title: 'Hvvoculus' },
+};
+
+function MobileContent() {
+  const { pathname } = useLocation();
+  if (pathname === '/') {
+    return <Home />;
+  }
+  const content = CONTENT_BY_PATH[pathname];
+  if (content) {
+    return <MarkdownPage url={content.url} title={content.title} />;
+  }
+  return <Home />;
+}
 
 export function MobileApp() {
-  const [searchParams] = useSearchParams();
-  const location = window.location;
-  const isHome = location.pathname === '/';
-
-  const desktopUrl = `${location.pathname}${location.search ? `${location.search}&desktop=1` : '?desktop=1'}`;
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
 
   return (
     <div className={styles.app}>
@@ -24,11 +40,7 @@ export function MobileApp() {
           Cooper Davies
         </Link>
         {!isHome && (
-          <Link
-            to={{ pathname: '/', search: searchParams.get('mobile') ? '?mobile=1' : '' }}
-            className={styles.back}
-            aria-label="Back to home"
-          >
+          <Link to="/" className={styles.back} aria-label="Back to home">
             ← Back
           </Link>
         )}
@@ -36,22 +48,18 @@ export function MobileApp() {
 
       <main className={styles.main}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          {CONTENT_ROUTES.map(({ path, url, label }) => (
-            <Route
-              key={path}
-              path={path}
-              element={<MarkdownPage url={url} title={label} />}
-            />
-          ))}
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<MobileContent />} />
         </Routes>
       </main>
 
       <footer className={styles.footer}>
-        <a href={desktopUrl} className={styles.fullSite}>
-          View full site (desktop)
-        </a>
+        <button
+          type="button"
+          className={styles.desktopModeBtn}
+          onClick={() => setViewPreference('desktop')}
+        >
+          Desktop mode
+        </button>
       </footer>
     </div>
   );

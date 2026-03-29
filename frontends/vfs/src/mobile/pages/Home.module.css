@@ -69,3 +69,18 @@
   color: var(--muted, #8b949e);
   margin-top: 0.25rem;
 }
+
+.footerNote {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--muted, #8b949e);
+}
+
+.footerNote a {
+  color: var(--muted, #8b949e);
+  text-decoration: none;
+}
+
+.footerNote a:active {
+  color: var(--fg, #e6edf3);
+}

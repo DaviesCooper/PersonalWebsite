@@ -72,12 +72,18 @@
   text-align: center;
 }
 
-.fullSite {
+.desktopModeBtn {
   font-size: 0.875rem;
   color: var(--muted, #8b949e);
-  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
 }
 
-.fullSite:active {
+.desktopModeBtn:active {
   color: var(--fg, #e6edf3);
+  background: var(--hover, #21262d);
 }

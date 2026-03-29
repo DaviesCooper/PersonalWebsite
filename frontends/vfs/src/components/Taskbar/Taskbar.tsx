@@ -1,4 +1,5 @@
 import type { WindowState } from '../../core/types/window';
+import { setViewPreference } from '@shared/viewPreference';
 import styles from './Taskbar.module.css';
 
 interface TaskbarProps {
@@ -33,6 +34,14 @@ export function Taskbar({ windows, activeId, onFocus, onOpenTerminal }: TaskbarP
           </button>
         ))}
       </div>
+      <button
+        type="button"
+        className={styles.mobileModeBtn}
+        onClick={() => setViewPreference('mobile')}
+        title="Switch to mobile portfolio view"
+      >
+        Mobile mode
+      </button>
     </footer>
   );
 }

@@ -44,6 +44,10 @@ export function Home() {
           </Link>
         </nav>
       </section>
+
+      <p className={styles.footerNote}>
+        <a href="/lasers">Laser cutter slides</a> (Thunder Training)
+      </p>
     </div>
   );
 }
