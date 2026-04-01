@@ -1,21 +1,17 @@
 import { MobileApp } from './components/Mobile/MobileApp';
 import { DesktopApp } from './components/Desktop/DesktopApp';
-import { useState } from 'react';
 import { MobileViewProvider } from './context/MobileViewContext';
+import { useMobileView } from './hooks/useMobileView';
 
-/**
- * Mobile portfolio vs desktop VFS: localStorage preference, else UA default.
- */
 export function App() {
-  const [isMobileView, setIsMobileView] = useState(Boolean);
+  const {
+    isMobileView,
+    setIsMobileView,
+  } = useMobileView();
 
   return (
     <MobileViewProvider value={{ isMobileView, setIsMobileView }}>
-      {
-        isMobileView ?
-          (<MobileApp />) :
-          (<DesktopApp />)
-      }
+      {isMobileView ? <MobileApp /> : <DesktopApp />}
     </MobileViewProvider>
-  )
+  );
 }

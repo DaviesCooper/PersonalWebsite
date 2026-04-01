@@ -49,6 +49,7 @@ export function MobileApp() {
           <a
             href="mailto:cooper@wildroseplains.ca"
             className={styles.emailBtn} // Add a class to style spacing
+            title="Email me at cooper@wildroseplains.ca"
           >
             <SlEnvolopeLetter />
           </a>

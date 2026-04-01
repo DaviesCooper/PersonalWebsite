@@ -24,6 +24,13 @@ export function Taskbar({ windows, activeId, onFocus, onOpenTerminal }: TaskbarP
         <img src="/logo.svg" alt="" className={styles.startIcon} aria-hidden />
         <span>Terminal</span>
       </button>
+      <a
+        href="mailto:cooper@wildroseplains.ca"
+        className={styles.emailBtn}
+        title="Email me at cooper@wildroseplains.ca"
+      >
+        <SlEnvolopeLetter />
+      </a>
       <div className={styles.windowList}>
         {windows.map(win => (
           <button
@@ -37,13 +44,6 @@ export function Taskbar({ windows, activeId, onFocus, onOpenTerminal }: TaskbarP
           </button>
         ))}
       </div>
-      <a
-        href="mailto:cooper@wildroseplains.ca"
-        className={styles.emailBtn}
-        title="Email me at cooper@wildroseplains.ca"
-      >
-        <SlEnvolopeLetter />
-      </a>
       <button
         type="button"
         className={styles.mobileModeBtn}
@@ -51,6 +51,7 @@ export function Taskbar({ windows, activeId, onFocus, onOpenTerminal }: TaskbarP
         title="Switch to mobile portfolio view"
       >
         <FaMobileScreen />
+        Mobile View
       </button>
     </footer>
   );
