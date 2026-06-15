@@ -7,6 +7,8 @@ import safetyVideo from './4_safety-video';
 import safetyFireExtinguishers from './5_safety-fire-extinguishers';
 import safetyChlorine from './6_safety-chlorine';
 import safetyInterlock from './7_safety-interlock';
+import passthroughInterlock from './7_passthrough-interlock';
+import eyeSafety from './7_eye-safety';
 import principles from './8_principles';
 import principlesControls from './9_principles-controls';
 import principlesControlsPositioning from './10_principles-controls-positioning';
@@ -29,7 +31,9 @@ export const slides = [
   safetyVideo,
   safetyFireExtinguishers,
   safetyChlorine,
+  eyeSafety,
   safetyInterlock,
+  passthroughInterlock,
   principles,
   principlesControls,
   principlesControlsPositioning,

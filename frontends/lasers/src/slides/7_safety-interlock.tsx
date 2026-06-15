@@ -3,7 +3,7 @@ import { defineSlide } from './defineSlide';
 
 const BASE = import.meta.env.BASE_URL;
 
-function Slide12d4(): JSX.Element {
+function SlideSafetyInterlock(): JSX.Element {
   return (
     <ColumnSlide
       left={
@@ -28,7 +28,7 @@ function Slide12d4(): JSX.Element {
   );
 }
 
-export default defineSlide(Slide12d4, {
+export default defineSlide(SlideSafetyInterlock, {
   id: 'safety-interlock',
   title: 'Safety',
   whenTool: 'xtool',

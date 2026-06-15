@@ -1,0 +1,81 @@
+.eye-safety-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.eye-safety-chart {
+  flex-shrink: 0;
+  width: min(220px, 38%);
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.eye-safety-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eye-safety-classes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.eye-safety-classes li {
+  margin: 0;
+}
+
+.eye-safety-class-label {
+  font-weight: 600;
+  padding: 0.12em 0.45em;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.eye-safety-class-1 {
+  background: #4ade80;
+  color: #14532d;
+}
+
+.eye-safety-class-2 {
+  background: #facc15;
+  color: #713f12;
+}
+
+.eye-safety-class-3 {
+  background: #fb923c;
+  color: #7c2d12;
+}
+
+.eye-safety-class-4 {
+  background: #f87171;
+  color: #7f1d1d;
+}
+
+@media (max-width: 1399px) {
+  .eye-safety-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .eye-safety-chart {
+    width: min(280px, 100%);
+  }
+
+  .eye-safety-classes {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
